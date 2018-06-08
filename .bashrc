@@ -98,7 +98,7 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 # Alias for emacs
 
-alias e='emacs --debug-init'
+alias e='emacs25'
 
 # short cut for chmod +x
 
