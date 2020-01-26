@@ -134,15 +134,27 @@ if ! shopt -oq posix; then
   fi
 fi
 
-PATH=$PATH:~/local/bin
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-eval "$(pyenv virtualenv-init -)"
+# I've commented out the pyenv path setting because it interferes with fish-pyenv somehow.
+# TODO: Sort this out
+# PATH=$PATH:~/local/bin
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# if command -v pyenv 1>/dev/null 2>&1; then
+#   eval "$(pyenv init -)"
+# fi
+# eval "$(pyenv virtualenv-init -)"
 
 
 #keymap
 
 #xmodmap ~/.xmodmap
+
+# This is for an app written in GoLang.
+export GOROOT=/usr/local/go1.10.3
+export PATH=${PATH}:${GOROOT}/bin
+export GOPATH=${HOME}/go
+export PATH=${PATH}:${GOPATH}/bin
+export GOROOT=/usr/local/go1.10.3
+export PATH=${PATH}:${GOROOT}/bin
+export GOROOT=/usr/local/go1.10.3
+export PATH=${PATH}:${GOROOT}/bin
